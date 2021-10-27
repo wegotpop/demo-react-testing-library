@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MuButton tests a snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <button
+      data-testid="button-to-be-clicked"
+    >
+      Click me!
+    </button>
+  </div>
+</DocumentFragment>
+`;

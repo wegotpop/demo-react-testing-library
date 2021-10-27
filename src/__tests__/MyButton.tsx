@@ -11,7 +11,7 @@ describe("MuButton tests", () => {
     // Create a mock function, which we will then use to check things are being called
     const mockOnClickHandler = jest.fn();
 
-    const result = render(<MyButton onClick={mockOnClickHandler} />);
+    render(<MyButton onClick={mockOnClickHandler} />);
 
     // find the element, based on its text content
     // const button = screen.getByText(/Click Me!/i);
@@ -27,5 +27,14 @@ describe("MuButton tests", () => {
 
     // Check the mock function was called exactly once
     expect(mockOnClickHandler).toBeCalledTimes(2);
+  });
+
+  test("a snapshot", () => {
+    const mockOnClickHandler = jest.fn();
+
+    const { asFragment } = render(<MyButton onClick={mockOnClickHandler} />);
+
+    // Snapshot located in ./__snapshots__
+    expect(asFragment()).toMatchSnapshot();
   });
 });
