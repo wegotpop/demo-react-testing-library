@@ -1,10 +1,15 @@
 import * as React from "react";
+import { getJSON } from "./popsss";
 
 export function MyButton({
   onClick,
 }: {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }) {
+  React.useEffect(() => {
+    console.log(getJSON("url"));
+  }, []);
+
   return (
     <div>
       <button
